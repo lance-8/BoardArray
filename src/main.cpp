@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string>
 #include "boardarray.h"
 using namespace std;
 
@@ -11,7 +12,7 @@ int main() {
 		cout << "Op: ";
 		cin >> ans;
         switch (ans) {
-            case 'a':
+            case 'a': {
         		cout << "Enter name: ";
                 cin.ignore(); 
         		getline(cin, player1->name);
@@ -21,6 +22,7 @@ int main() {
         		cin >> player1->score;
         		board->add(player1);
                 break;
+            }
             case 'p':
                 board->print();
                 break;
